@@ -1,0 +1,36 @@
+转换
+    列表转字符串:"".join[list] 双引号中间可为分隔符
+    math.ceil 向上取整
+    math.floor 向下取整
+    (int).bit_length()返回整形的二进制位数
+
+
+一些库
+    bisect在列表有序的前提下使用二分查找,使插入值后仍然让列表有序
+    bisect_right返回大于x的第一个下标,bisect_left返回大于等于x的第一个下标
+    shapely库处理几何对象
+    deque() 双端队列
+    OrderedDict可以按照输入顺序遍历 可在O(1)时间将某个键值移到末尾
+
+字典
+    pop可以删除键值对
+    setdefaul()是比较安全的添加方式
+    keys in dict用于判断是否有键
+    OrderedDict popitem(last=) last为true删除最后一个 false删除第一个
+
+双端队列
+    extend()可迭代对象入队
+    pop append popleft appendleft 带left的是队首操作
+
+数学
+    isqrt求整数平方根
+
+    ### 求大数字的对数时
+    # 先用浮点近似，再用整数幂校正，避免大数下 log 精度导致的层级偏差
+    n = int(math.log(l, 3)) if l > 0 else 0
+    # 回摆修正：确保 3^n <= l < 3^(n+1)
+    while pow(3, n + 1) <= l:
+        n += 1
+    while pow(3, n) > l:
+        n -= 1
+    ###
