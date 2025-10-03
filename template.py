@@ -54,6 +54,8 @@ if 1:
 
         import random
         import os
+        import time
+        import numpy as np
 
         import queue
         import bisect
@@ -219,11 +221,3 @@ if 1:
             while tmp != -1:
                 yield self.cur[tmp]
                 tmp = self.pre[tmp]
-
-def solve():
-
-    return
-
-t=II()
-for _ in range(t):
-    solve()

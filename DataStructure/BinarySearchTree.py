@@ -3,6 +3,7 @@ class Node:
         self.value=value
         self.lchild=None
         self.rchild=None
+        self.height=0
 class BinarySearchTree:
     def __init__(self,iteration=None):
         self.root=None
@@ -94,6 +95,7 @@ class BinarySearchTree:
     # 遍历打印
     def traverse(self):
         self._traverse(self.root)
+        print()
 def main():
     nums=[5,2,5,34,534,5,34,667,456,45,7]
     tree=BinarySearchTree(nums)
